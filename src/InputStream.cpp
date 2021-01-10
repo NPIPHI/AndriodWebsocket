@@ -30,8 +30,7 @@ std::optional<uint8_t> InputStream::read_byte() {
         return *(_buffer_head++);
     }
 }
-#include "../../log.h"
-#include <chrono>
+
 void InputStream::fill_buffer() {
     if(_buffer_tail == BUFFER_SIZE + _buffer.get()) rebase_buffer();
     if(_buffer_tail == BUFFER_SIZE + _buffer.get()) throw std::runtime_error("input stream buffer filled");

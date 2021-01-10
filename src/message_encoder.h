@@ -6,7 +6,7 @@
 #define V8DEBUGGER_MESSAGE_ENCODER_H
 
 #include<vector>
-#include "../include/websocket-server/Message.h"
+#include "../include/AndroidWebsocket/Message.h"
 
 namespace message_encoder {
     std::vector<uint8_t> encode(message msg);

@@ -5,11 +5,10 @@
 #include <string>
 #include <optional>
 #include <utility>
-#include "../include/websocket-server/Websocket_server.h"
+#include "../include/AndroidWebsocket/Websocket_server.h"
 #include "Frame.h"
 #include "message_encoder.h"
-#include "../../log.h"
-#include "../include/websocket-server/Message.h"
+#include "../include/AndroidWebsocket/Message.h"
 #include "Sha1.h"
 #include "Base64.h"
 
@@ -131,7 +130,6 @@ void Websocket_server::wait_frontend_message() {
             break;
         }
         if (decoder.connection_closed()){
-            LOG_E("lost connection");
             terminated = true;
             break;
         }
@@ -143,12 +141,8 @@ void Websocket_server::receiver_start() {
     iStream = InputStream(&socket);
     websocket_connect();
 
-    try{
-        while(!terminated){
-            wait_frontend_message();
-        }
-    } catch (const std::exception& e) {
-        LOG_E("%s", e.what());
+    while(!terminated){
+        wait_frontend_message();
     }
 }
 
