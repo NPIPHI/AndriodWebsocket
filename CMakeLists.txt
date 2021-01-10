@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.4.1)
 
-project(websocket-server)
+project(AndroidWebsocket)
 
-add_library(websocket-server STATIC
+add_library(AndroidWebsocket STATIC
         src/Base64.h
         src/Frame.cpp src/Frame.h
         src/InputStream.cpp src/InputStream.h
@@ -15,4 +15,4 @@ add_library(websocket-server STATIC
         src/Websocket.cpp include/AndroidWebsocket/Websocket.h
         src/Websocket_server.cpp include/AndroidWebsocket/Websocket_server.h)
 
-target_include_directories(websocket-server PUBLIC include)
+target_include_directories(AndroidWebsocket PUBLIC include)
