@@ -8,7 +8,7 @@
 #include <cstdint>
 #include <vector>
 #include <array>
-#include "InputStream.h"
+#include "AndroidWebsocket/InputStream.h"
 
 class Frame {
 public:

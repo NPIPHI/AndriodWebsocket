@@ -9,7 +9,7 @@
 #include<vector>
 #include<string_view>
 #include<thread>
-#include "../../src/InputStream.h"
+#include "InputStream.h"
 #include "../../src/SafeQueue.h"
 #include "../../src/SocketServer.h"
 #include "Message.h"

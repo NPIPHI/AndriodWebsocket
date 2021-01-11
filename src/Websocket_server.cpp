@@ -16,8 +16,8 @@ Websocket_server::~Websocket_server() {
     terminated = true;
     outgoing_messages.enqueue({});//wake up the sender thread so it can terminate itself
     socket.shutdown();//wake up the receiver thread so it can terminate itself
-    receiver_thread.join();
-    sender_thread.join();
+    if(receiver_thread.joinable()) receiver_thread.join();
+    if(sender_thread.joinable()) sender_thread.join();
 }
 
 void Websocket_server::stream_write(const uint8_t *begin, const uint8_t *end) {

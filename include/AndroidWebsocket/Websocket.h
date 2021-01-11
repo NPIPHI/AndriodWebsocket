@@ -6,8 +6,8 @@
 #define V8DEBUGGER_WEBSOCKET_H
 
 #include "Message.h"
-#include "../../src/Socket.h"
-#include "../../src/InputStream.h"
+#include "Socket.h"
+#include "InputStream.h"
 #include <optional>
 #include <string>
 

@@ -3,7 +3,7 @@
 //
 
 #include <optional>
-#include "InputStream.h"
+#include "AndroidWebsocket/InputStream.h"
 
 int InputStream::read(void *out, int len) {
     if(_buffer_tail - _buffer_head < len){

@@ -5,9 +5,9 @@
 #ifndef V8DEBUGGER_INPUTSTREAM_H
 #define V8DEBUGGER_INPUTSTREAM_H
 
-#include<vector>
-#include<cstdint>
-#include<optional>
+#include"../../../../../../../../../../../AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/vector"
+#include"../../../../../../../../../../../AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/cstdint"
+#include"../../../../../../../../../../../AppData/Local/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/optional"
 #include "Socket.h"
 
 

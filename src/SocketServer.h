@@ -5,7 +5,7 @@
 #ifndef V8DEBUGGER_SOCKETSERVER_H
 #define V8DEBUGGER_SOCKETSERVER_H
 
-#include "Socket.h"
+#include "AndroidWebsocket/Socket.h"
 
 class SocketServer {
 private:

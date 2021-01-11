@@ -4,7 +4,7 @@
 
 #include "../include/AndroidWebsocket/Websocket.h"
 #include "message_encoder.h"
-#include "Socket.h"
+#include "AndroidWebsocket/Socket.h"
 #include "Frame.h"
 
 
