@@ -60,22 +60,9 @@ std::array<uint8_t, 4> Frame::decodeMaskingKey(InputStream &input){
 
 void
 Frame::unmask(std::array<uint8_t, 4> key, uint8_t *begin, size_t len) {
-
-    // this optimization is necessary, clang does not automatically vectorize at all
-    uint64_t k = uint32_t(key[0]) + (uint32_t(key[1]) << 8) + (uint32_t(key[2]) << 16) + (uint32_t(key[3]) << 24);
-    k += k << 32;
-    auto *d = (uint64_t *)begin;
-
-    for(int i = 0; i < len/8; i++) {
-        d[i] ^= k;
-    }
-
-    for(int i = len/8*8; i < len; i++){
+    for(int i = 0; i < len; i++){
         begin[i] ^= key[i % key.size()];
     }
-    //    for(int i = 0; i < data.size(); i++){
-    //        data[i] ^= key[i % key.size()];
-    //    }
 }
 
 const uint8_t * Frame::end() const {
